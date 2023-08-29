@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rebranding Announcement</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+  }
+  .announcement {
+    margin-top: 150px;
+    font-size: 24px;
+  }
+  .timer {
+    font-size: 18px;
+    color: #555;
+  }
+</style>
+<script>
+  window.onload = function() {
+    let seconds = 10;
+    let timer = setInterval(function() {
+      document.getElementById("timer").textContent = seconds;
+      seconds--;
+      if (seconds < 0) {
+        clearInterval(timer);
+        window.location.href = "https://www.lumin-essence.ca/";
+      }
+    }, 1000);
+  };
+</script>
+</head>
+<body>
+<div class="announcement">
+  <p>Exciting News!</p>
+  <p><strong>Practical Spirituality</strong> is rebranding to <strong>Lumin<span style="color: #903eb3;">ESSENCE</span></strong>!</p>
+  <p>Stay tuned for an enlightening journey.</p>
+  <p class="timer">Redirecting in <span id="timer">10</span> seconds...</p>
+  <img src="image.png" alt="Rebranding Image">
+</div>
+</body>
+</html>
